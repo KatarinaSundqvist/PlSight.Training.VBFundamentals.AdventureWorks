@@ -71,10 +71,20 @@
     <Compile Include="CustomerControls\CustomerDetailControl.xaml.vb">
       <DependentUpon>CustomerDetailControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomerControls\CustomerListControl.xaml.vb">
+      <DependentUpon>CustomerListControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ProductControls\ProductDetailControl.xaml.vb">
       <DependentUpon>ProductDetailControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ProductControls\ProductListControl.xaml.vb">
+      <DependentUpon>ProductListControl.xaml</DependentUpon>
+    </Compile>
     <Page Include="CustomerControls\CustomerDetailControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomerControls\CustomerListControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -91,6 +101,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ProductControls\ProductDetailControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProductControls\ProductListControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -146,6 +160,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AdventureWorks.DataLayer\AdventureWorks.DataLayer.vbproj">
+      <Project>{b64de30b-5031-4a75-b41f-d7f033610df4}</Project>
+      <Name>AdventureWorks.DataLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AdventureWorks.EntityLayer\AdventureWorks.EntityLayer.vbproj">
       <Project>{31013b81-a6c5-47bf-bf92-d95b577fdf92}</Project>
       <Name>AdventureWorks.EntityLayer</Name>
@@ -158,6 +176,10 @@
       <Project>{596ade59-22db-47af-b7f4-fb5a4f174633}</Project>
       <Name>Common.Library</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Xml\Customers.xml" />
+    <Resource Include="Xml\Products.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

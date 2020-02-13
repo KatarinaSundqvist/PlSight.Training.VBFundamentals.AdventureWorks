@@ -11,7 +11,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Menu IsMainMenu="True">
             <MenuItem Header="_File">
@@ -19,10 +19,14 @@
                           Click="Exit_Click" />
             </MenuItem>
             <MenuItem Header="Products">
+                <MenuItem Header="List"
+                          Click="ProductList_Click" />
                 <MenuItem Header="Detail"
                           Click="ProductDetail_Click" />
             </MenuItem>
             <MenuItem Header="Customers">
+                <MenuItem Header="List"
+                  Click="CustomerList_Click" />
                 <MenuItem Header="Detail"
                           Click="CustomerDetail_Click" />
             </MenuItem>

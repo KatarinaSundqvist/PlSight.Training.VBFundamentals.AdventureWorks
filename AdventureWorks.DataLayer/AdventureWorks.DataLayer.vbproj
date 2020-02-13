@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4F66E2E0-C89A-47D9-933C-8072B6EBDD73}</ProjectGuid>
+    <ProjectGuid>{B64DE30B-5031-4A75-B41F-D7F033610DF4}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>AdventureWorks.ViewModelLayer</RootNamespace>
-    <AssemblyName>AdventureWorks.ViewModelLayer</AssemblyName>
+    <RootNamespace>AdventureWorks.DataLayer</RootNamespace>
+    <AssemblyName>AdventureWorks.DataLayer</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
@@ -19,7 +19,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>AdventureWorks.ViewModelLayer.xml</DocumentationFile>
+    <DocumentationFile>AdventureWorks.DataLayer.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -28,7 +28,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>AdventureWorks.ViewModelLayer.xml</DocumentationFile>
+    <DocumentationFile>AdventureWorks.DataLayer.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -45,6 +45,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -64,7 +65,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomerViewModel.vb" />
+    <Compile Include="CustomerManager.vb" />
+    <Compile Include="ProductManager.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -80,7 +82,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ProductViewModel.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -102,10 +103,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AdventureWorks.DataLayer\AdventureWorks.DataLayer.vbproj">
-      <Project>{B64DE30B-5031-4A75-B41F-D7F033610DF4}</Project>
-      <Name>AdventureWorks.DataLayer</Name>
-    </ProjectReference>
     <ProjectReference Include="..\AdventureWorks.EntityLayer\AdventureWorks.EntityLayer.vbproj">
       <Project>{31013b81-a6c5-47bf-bf92-d95b577fdf92}</Project>
       <Name>AdventureWorks.EntityLayer</Name>
