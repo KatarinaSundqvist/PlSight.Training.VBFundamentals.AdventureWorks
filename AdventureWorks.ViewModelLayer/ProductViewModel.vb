@@ -15,7 +15,7 @@ Public Class ProductViewModel
 
     Function LoadProduct(ByVal productId As Integer, ByVal startingFilePath As String) As Product
         'Hard-code an entity
-        Entity = New Product() With {.ProductID = 680, .Name = "HL Road Frame - Black, 58", .ProductNumber = "FR-R92B-58", .Color = "Black", .Size = "58", .Weight = 1016.04D, .StandardCost = 1059.31D, .ListPrice = 1300D
+        Entity = New Product() With {.ProductID = 680, .Name = "HL Road Frame - Black, 58", .ProductNumber = "FR-R92B-58", .Color = "Black", .Size = "58", .Weight = 1016.04D, .StandardCost = 1059.31D, .ListPrice = 1431.5D, .SellEndDate = #12/31/2021#
         }
 
         Return Entity
